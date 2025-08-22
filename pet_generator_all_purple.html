@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Generator</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #8A2BE2;
+      margin: 20px 0;
+      font-size: 2.5em;
+      text-shadow: 
+        0 0 5px #8A2BE2,
+        0 0 10px #8A2BE2,
+        0 0 20px #8A2BE2,
+        0 0 40px #8A2BE2;
+    }
+    .input-box {
+      margin: 20px auto;
+      padding: 10px;
+      border: 2px solid #8A2BE2; /* purple outline */
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 400px;
+      display: block;
+      text-align: center;
+    }
+    .pet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      width: 80%;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    .pet-button {
+      background-color: black;
+      border: 2px solid #8A2BE2; /* purple outline */
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      color: white;
+      cursor: default;
+      transition: 0.3s;
+    }
+    .pet-button:hover {
+      background-color: #8A2BE2; /* purple hover */
+      color: black;
+    }
+    .generate-button {
+      margin-top: 20px;
+      background-color: black;
+      border: 2px solid #8A2BE2; /* purple outline */
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.3em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .generate-button:hover {
+      background-color: #8A2BE2; /* purple hover */
+      color: black;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pet Generator</h1>
+  <input type="text" class="input-box" placeholder="Enter Roblox Username">
+  <div class="pet-grid">
+    <div class="pet-button">🐉 Dragon Fly</div>
+    <div class="pet-button">🦊 Kitsune</div>
+    <div class="pet-button">🐙 Mimic Octopus</div>
+    <div class="pet-button">🦖 T-Rex</div>
+    <div class="pet-button">🦝 Raccoon</div>
+    <div class="pet-button">🐱 Moon Cat</div>
+  </div>
+  <button class="generate-button">GENERATE</button>
+  <div class="footer">Made by Luna</div>
+</body>
+</html>
